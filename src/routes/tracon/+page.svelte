@@ -1,71 +1,15 @@
-<script lang="ts">
-  let selectedTab: string = "main_menu";
- 
-  interface Tab {
-   title: string;
-   content: string;
-  }
- 
-  const tabs: Record<string, Tab> = {
-   emergency: {
-    title: "Emergency",
-    content: "Emergency Information",
-   },
-   sia: {
-    title: "SIA",
-    content: "This is the content for the SIA tab.",
-   },
-   weather: {
-    title: "Weather",
-    content: "This is the content for the Weather tab.",
-   },
-   vfr_sectional: {
-    title: "VFR Sectional",
-    content: "This is the content for the VFR Sectional tab.",
-   },
-   approach_charts: {
-    title: "Approach Charts",
-    content: "This is the content for the Approach Charts tab.",
-   },
-   publication: {
-    title: "Publication",
-    content: "This is the content for the Publication tab.",
-   },
-   main_menu: {
-    title: "Main Menu",
-    content: "This is the content for the Main Menu tab.",
-   },
-  };
- 
-  function handleTabClick(tab: string) {
-   selectedTab = tab;
-  }
- </script>
- 
- <body>
-  <section class="topbar">
-   <div class="topbar-container">
-    {#each Object.entries(tabs) as [key, { title }]}
-     <button
-      class={key === "emergency" ? "emergency active" : "topbarbutton"}
-      type="button"
-      on:click={() => handleTabClick(key)}
-     >
-      {key === "emergency" ? (
-        Emergency
-        <br />
-        Information
-       </div>
-      ) : title}
-     </button>
-    {/each}
-   </div>
-  </section>
- 
-  <div class="content">
-   {tabs[selectedTab].content}
-  </div>
- 
+<body>
+<div class = "login screen">
+<section class = "topbar">
+  <button class = "ermgency"><a href = "emergency/+page.svelte">Emergency <br> Information</a></button>
+  <button class = "topbarbutton"><a href = "SIA/+page.svelte">SIA</a></button>
+  <button class = "topbarbutton"><a href = "vfrsectional/+page.svelte">VFR Sectional</a></button>
+  <button class = "approachcharts"><a href = "charts/+page.svlete">Approach <br> Charts</a></button>
+  <button class = "topbarbutton"><a href = "publication/+page.svelte">Publications</a></button>
+  <button class = "topbarrbutton"><a href = "main_menu/+page.svelte">Main Menu</a></button>
+</section>
+                <h1>welcome, to ids5 select a tab at the top to get started</h1>
+</div>
   <style>
    .emergency {
     background-color: rgb(198, 2, 0);
@@ -80,11 +24,29 @@
     vertical-align: middle;
     margin-right: 5px; /* Remove margin-left for consistent spacing */
    }
+
+   .approachcharts {
+    display: inline-block; 
+    background-color: rgb(192, 192, 192);
+    border-radius: 1px rgb (128, 128, 128);
+    padding-left: 15px;
+    padding-right: 15px; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    border: none;
+    width: 13%; 
+    vertical-align: middle;
+    margin-right: 5px; 
+   }
  
    .topbar {
     background-color: rgb(127, 127, 127);
     display: inline-block;
     width: 100%;
+   }
+
+   body {
+    background-color: rgb (127, 127, 127)
    }
  
    .topbar-container {
