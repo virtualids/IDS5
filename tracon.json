@@ -1,0 +1,43 @@
+{
+  "id": "JX",
+  "facility": "Central Florida Tracon- F11",
+  "type": "TRACON",
+  "airports": {
+    "KMCO": {
+      "runways": [
+        "18R",
+        "18L",
+        "17R",
+        "17L",
+        "35L",
+        "35R",
+        "36L",
+        "36R"
+      ],
+      "approaches": [
+        "RWY 18R ILS",
+        "RWY 17R ILS",
+        "RWY 17L ILS",
+        "RWY 18L RNAV",
+        "RWY 18R RNAV",
+        "RWY 17L RNAV",
+        "RWY 17R RNAV",
+        "RWY 36L RNAV",
+        "RWY 36R RNAV",
+        "RWY 35L RNAV",
+        "RWY 35R RNAV",
+        "RWY 36R ILS",
+        "RWY 35L ILS",
+        "RWY 35R ILS"
+      ],
+      "configuration": [
+        "NORTH FLOW IMC",
+        "SOUTH FLOW IMC",
+        "NORTH FLOW RNAV",
+        "SOUTH FLOW RNAV",
+        "SOUTH FLOW VIS",
+        "NORTH FLOW VIS"
+      ]
+    }
+  }
+}
